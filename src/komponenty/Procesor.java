@@ -1,8 +1,8 @@
-package Komponenty;
+package komponenty;
 
-import Wyjątki.ReachedMaxTempException;
+import wyjatki.ReachedMaxTempException;
 
-public class Procesor extends Komponenty{
+public class Procesor extends Komponent{
     private double taktowanie;
     private double temperatura;
     private static final double MAX_TEMP = 71;
@@ -33,7 +33,7 @@ public class Procesor extends Komponenty{
         return MAX_TEMP;
     }
 
-    public void podkrecanie(double podkrecenie){
+    public void podkrecanieP(double podkrecenie){
         taktowanie = taktowanie + podkrecenie;
         temperatura = temperatura + (podkrecenie / 100) * 10;
         if(temperatura > MAX_TEMP)

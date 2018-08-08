@@ -1,8 +1,9 @@
-package Komputer;
+package komputer;
 
-import Komponenty.DyskTwardy;
-import Komponenty.PamiecRam;
-import Komponenty.Procesor;
+import komponenty.DyskTwardy;
+import komponenty.PamiecRam;
+import komponenty.Procesor;
+import wyjatki.ReachedMaxTempException;
 
 public class Test {
     public static void main(String[] args) {
@@ -14,11 +15,20 @@ public class Test {
         Komputer komputer = new Komputer(pro, ram, dysk);
 
         System.out.println(pro.toString());
-        pro.podkrecanie(300);
+        try{
+            pro.podkrecanieP(400);
+        } catch(ReachedMaxTempException e) {
+            e.printStackTrace();
+        }
         System.out.println(pro.toString());
 
         System.out.println(ram.toString());
-        ram.podkrecanie(160);
+        try{
+            ram.podkrecanieR(200);
+        } catch(ReachedMaxTempException ex){
+            ex.printStackTrace();
+        }
+
         System.out.println(ram.toString());
 
     }

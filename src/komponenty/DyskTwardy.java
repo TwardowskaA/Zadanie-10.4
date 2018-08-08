@@ -1,6 +1,6 @@
-package Komponenty;
+package komponenty;
 
-public class DyskTwardy extends Komponenty{
+public class DyskTwardy extends Komponent{
     private int pojemosc;
 
     public DyskTwardy(String nazwa, String producent, String numer, int pojemosc) {

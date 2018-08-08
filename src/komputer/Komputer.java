@@ -1,14 +1,14 @@
-package Komputer;
+package komputer;
 
-import Komponenty.DyskTwardy;
-import Komponenty.PamiecRam;
-import Komponenty.Procesor;
+import komponenty.DyskTwardy;
+import komponenty.PamiecRam;
+import komponenty.Procesor;
 
 public class Komputer {
 
-    Procesor procesor;
-    PamiecRam ram;
-    DyskTwardy dyskTwardy;
+    private Procesor procesor;
+    private PamiecRam ram;
+    private DyskTwardy dyskTwardy;
 
     public Komputer(Procesor procesor, PamiecRam ram, DyskTwardy dyskTwardy) {
         this.procesor = procesor;

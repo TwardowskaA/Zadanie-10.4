@@ -1,11 +1,11 @@
-package Komponenty;
+package komponenty;
 
-public abstract class Komponenty {
+public abstract class Komponent {
     private String nazwa;
     private String producent;
     private String numer;
 
-    public Komponenty(String nazwa, String producent, String numer) {
+    public Komponent(String nazwa, String producent, String numer) {
         this.nazwa = nazwa;
         this.producent = producent;
         this.numer = numer;
