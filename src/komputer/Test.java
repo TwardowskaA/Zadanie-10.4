@@ -24,7 +24,7 @@ public class Test {
 
         System.out.println(ram.toString());
         try{
-            ram.podkrecanieR(200);
+            ram.podkrecanieR(170);
         } catch(ReachedMaxTempException ex){
             ex.printStackTrace();
         }

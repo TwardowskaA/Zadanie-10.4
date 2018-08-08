@@ -2,7 +2,7 @@ package komponenty;
 
 import wyjatki.ReachedMaxTempException;
 
-public class Procesor extends Komponent{
+public class Procesor extends Komponent {
     private double taktowanie;
     private double temperatura;
     private static final double MAX_TEMP = 71;
@@ -33,11 +33,12 @@ public class Procesor extends Komponent{
         return MAX_TEMP;
     }
 
-    public void podkrecanieP(double podkrecenie){
-        taktowanie = taktowanie + podkrecenie;
-        temperatura = temperatura + (podkrecenie / 100) * 10;
-        if(temperatura > MAX_TEMP)
-            throw new ReachedMaxTempException("Nie można wykonać. Osiągnięto MAX temperature komponentu");
+    public void podkrecanieP(double podkrecenie) {
+        if (temperatura + (podkrecenie / 100) * 10 < MAX_TEMP) {
+            temperatura = temperatura + (podkrecenie / 100) * 10;
+            taktowanie= taktowanie + podkrecenie;
+        } else throw new ReachedMaxTempException("Nie można wykonać. Osiągnięto MAX temperature komponentu");
+
     }
 
     @Override

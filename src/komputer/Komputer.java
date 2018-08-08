@@ -3,6 +3,7 @@ package komputer;
 import komponenty.DyskTwardy;
 import komponenty.PamiecRam;
 import komponenty.Procesor;
+import wyjatki.ReachedMaxTempException;
 
 public class Komputer {
 

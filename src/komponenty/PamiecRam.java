@@ -45,10 +45,10 @@ public class PamiecRam extends Komponent {
     }
 
     public void podkrecanieR(double podkrecenie) {
-        taktowanie = taktowanie + podkrecenie;
-        temperatura = temperatura + (podkrecenie / 100) * 15;
-        if (temperatura > MAX_TEMP)
-            throw new ReachedMaxTempException("Nie można wykonać. Osiągnięto MAX temperature komponentu");
+        if (temperatura + (podkrecenie / 100) * 15 < MAX_TEMP) {
+            temperatura = temperatura + (podkrecenie / 100) * 15;
+            taktowanie = taktowanie + podkrecenie;
+        } else throw new ReachedMaxTempException("Nie można wykonać. Osiągnięto MAX temperature komponentu");
     }
 
     @Override
