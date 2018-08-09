@@ -18,7 +18,7 @@ public class Test {
         try{
             pro.podkrecanieP(400);
         } catch(ReachedMaxTempException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         System.out.println(pro.toString());
 
@@ -26,7 +26,7 @@ public class Test {
         try{
             ram.podkrecanieR(170);
         } catch(ReachedMaxTempException ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
 
         System.out.println(ram.toString());
